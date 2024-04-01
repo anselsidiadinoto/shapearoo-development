@@ -7,7 +7,7 @@ export function ShopSelectionInfo(){
           shop name
         </div>
         <div className="mt-1">shop address</div>
-        <div>Grand Indonesia unit 4011</div>
+        <div>Grand Indonesia unit 401</div>
         <div>Jakarta Utara, 49990</div>
         <div className="mt-1">edit print shop</div>
       </div>

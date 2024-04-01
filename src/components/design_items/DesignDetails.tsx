@@ -49,5 +49,5 @@ export function DesignDetails(){
         </div>
       </div>
     </div>
-  )
+  );
 };

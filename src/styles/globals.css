@@ -68,7 +68,7 @@
 
 @layer utilities {
   .font_primary {
-    @apply font-open-sans;
+    @apply font-open-sans font-light;
   }
   .font_nav_inactive {
     @apply text-gray-400 font-light;

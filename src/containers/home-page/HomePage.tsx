@@ -72,5 +72,5 @@ export function HomePage(){
       </div>
       <Footer/>
     </div>
-  )
-}
+  );
+};

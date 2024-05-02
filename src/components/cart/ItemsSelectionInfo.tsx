@@ -1,5 +1,5 @@
-export function ItemsSelectionInfo(){
-  return(
+export function ItemsSelectionInfo() {
+  return (
     <div className="flex w-full gap-3 text-sm border-b-[1px] border-gray-300 py-3">
       <div className="w-10 flex">9</div>
       <div className="w-60 flex">
@@ -30,13 +30,11 @@ export function ItemsSelectionInfo(){
             <div>est weight: 20 gr (ea. $3)</div>
             <div className="mt-1 text-sm">60,000</div>
             <div>edit print details</div>
-
           </div>
         </div>
-
       </div>
       <div className="w-16 flex justify-end">300,000</div>
       <div className="flex-grow flex justify-end">700,000</div>
     </div>
   );
-};
+}

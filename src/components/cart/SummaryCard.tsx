@@ -13,10 +13,10 @@ export function SummaryCard(){
   return (
     <Card className="rounded-xl p-3 font_primary text-sm">
       <CardHeader className="p-0">
-        <CardTitle className="text-lg">Order Summary</CardTitle>
+        <CardTitle className="text-base">Order Summary</CardTitle>
       </CardHeader>
       <Separator className="my-2"/>
-      <CardContent className="p-0">
+      <CardContent className="p-0 text-xs">
         <div className="flex flex-col">
           <div className="flex justify-between">
             <div>Items:</div>
@@ -36,7 +36,7 @@ export function SummaryCard(){
       <CardFooter className="p-0">
         <Button 
           variant={"default"}
-          className="rounded-lg w-full mt-2"
+          className="rounded-lg w-full mt-3 text-xs h-9"
         > Place Order</Button>
       </CardFooter>
 

@@ -1,4 +1,4 @@
-export function Header() {
+export function ShopNavigation() {
   return (
     <div className="w-full flex flex-col font_primary mt-8 mb-6">
       <div className="flex justify-between">
@@ -9,21 +9,18 @@ export function Header() {
             </div>
             <div className="flex gap-2 items-end font_nav_inactive pb-[1px] font-bold">
               <div className="font-light">logout</div>
-              <div>account</div>
               <div>about</div>
               <div>help</div>
             </div>
           </div>
           <div className="flex gap-2 items-end font_nav_inactive">
-            <div>designs</div>
-            <div>shops</div>
+            <div>profile</div>
             <div>orders</div>
-            <div>lists</div>
-            <div>cart</div>
+            {/* <div>messages</div> */}
           </div>
         </div>
-        <div className="flex items-end text-primary text-5xl font-light tracking-tighter">
-          Shapearoo
+        <div className="flex items-end text-primary text-3xl font-light tracking-tighter">
+          Shop @Shapearoo
         </div>
       </div>
     </div>

@@ -6,10 +6,14 @@
 
 generator client {
   provider     = "prisma-kysely"
-  output       = "../src/db/kysely"
-  fileName     = "generated_types.ts"
+  output       = "../src/db"
+  fileName     = "types.ts"
   enumFileName = "generated_enums.ts"
 }
+
+// generator client {
+//   provider = "prisma-client-js"
+// }
 
 datasource db {
   provider  = "postgresql"
@@ -45,13 +49,14 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String         @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?        @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
+  User_general  User_general[]
 }
 
 model VerificationToken {
@@ -60,4 +65,28 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model User_general {
+  id              String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email           String
+  name            String
+  user_id         User              @relation(fields: [userId], references: [id])
+  userId          String
+  DeliveryAddress DeliveryAddress[]
+}
+
+model DeliveryAddress {
+  id      String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id User_general @relation(fields: [user_generalId], references: [id])
+
+  first_name     String?
+  last_name      String?
+  address_line_1 String?
+  address_line_2 String?
+  address_city   String?
+  address_state  String?
+  address_zip    String?
+
+  user_generalId String @db.Uuid
 }

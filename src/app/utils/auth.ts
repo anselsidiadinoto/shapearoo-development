@@ -32,31 +32,29 @@ const authOptions = {
       }
       return token;
     },
-    async session({ session, token }: any ) {
-      
+    async session({ session, token }: any) {
       if (token) {
         session.accessToken = token.accessToken;
         session.user.id = token.sub;
       }
-      const sessionObject = { 
-        "user" : {
-          "name" : session.user.name as string,
-          "email" : session.user.email as string,
-          "image" : session.user.image as string,
-          "id" : session.user.id as string
+      const sessionObject = {
+        user: {
+          name: session.user.name as string,
+          email: session.user.email as string,
+          image: session.user.image as string,
+          id: session.user.id as string,
         },
-        "expires": session.expires as string,
-        "accessToken": session.accessToken as string
-      }
+        expires: session.expires as string,
+        accessToken: session.accessToken as string,
+      };
 
       return sessionObject;
     },
   },
-  session : {
-    strategy: 'jwt'
+  session: {
+    strategy: 'jwt',
   },
-  secret : process.env.AUTH_SECRET as string,
-  
+  secret: process.env.AUTH_SECRET as string,
 } satisfies NextAuthOptions;
 
 export default authOptions;

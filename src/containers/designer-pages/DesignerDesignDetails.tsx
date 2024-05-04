@@ -3,7 +3,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 export function DesignerDesignDetails() {
   return (
-    <div className='w-[717px] mx-auto mt-10] '>
+    <div className='w-[717px] mx-auto mt-10 '>
       <div className='flex gap-3 border-b-[1px] w-full border-black p-2'>
         <div>Design Details</div>
       </div>

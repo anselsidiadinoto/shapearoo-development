@@ -1,4 +1,4 @@
-import { ShopProfile } from '@/containers/shop-pages/shop-profile/ShopProfile';
+import { ShopProfile } from '@/containers/shop-pages/ShopProfile';
 
 export default function page() {
   return <ShopProfile />;

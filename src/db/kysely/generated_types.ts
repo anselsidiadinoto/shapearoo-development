@@ -18,6 +18,17 @@ export type Account = {
     id_token: string | null;
     session_state: string | null;
 };
+export type DeliveryAddress = {
+    id: Generated<string>;
+    first_name: string | null;
+    last_name: string | null;
+    address_line_1: string | null;
+    address_line_2: string | null;
+    address_city: string | null;
+    address_state: string | null;
+    address_zip: string | null;
+    user_generalId: string;
+};
 export type Session = {
     id: string;
     sessionToken: string;
@@ -31,6 +42,12 @@ export type User = {
     emailVerified: Timestamp | null;
     image: string | null;
 };
+export type User_general = {
+    id: Generated<string>;
+    email: string;
+    name: string;
+    userId: string;
+};
 export type VerificationToken = {
     identifier: string;
     token: string;
@@ -38,7 +55,9 @@ export type VerificationToken = {
 };
 export type DB = {
     Account: Account;
+    DeliveryAddress: DeliveryAddress;
     Session: Session;
     User: User;
+    User_general: User_general;
     VerificationToken: VerificationToken;
 };
